@@ -2,7 +2,7 @@ package br.edu.sr.ifes.bdd.teste.pt_br;
 
 import br.edu.sr.ifes.bdd.Belly;
 import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Então;
+import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -27,7 +27,7 @@ public class PTBRSteps {
         this.waitingTime = waitingTime;
     }
 
-    @Então("^Minha barriga deve (.*)$")
+    @Entao("^Minha barriga deve (.*)$")
     public void my_belly_should_growl(String expectedSound) throws Throwable {
         String actualSound = belly.getSound2(waitingTime);
         assertThat(actualSound, is(expectedSound));
